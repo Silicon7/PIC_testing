@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  TEST                                                                 06/13/2016 22:24:12 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\test.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE test.a51 SET(SMALL) DEBUG PRINT(.\Listings\test.lst) OBJECT(.\Objects\t
+                      est.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     $mod51 
+0000                   2             ORG     00H
+0000 802E              3             SJMP C_START
+                       4             
+0030                   5             ORG 30H
+                       6             
+0030                   7     C_START:
+0030                   8     LOOP:
+0030 D56FFD            9             DJNZ 0x0FFFF , LOOP
+                      10             
+0033 80FB             11             JMP C_START
+                      12             
+                      13     END
+                             
+                                     
+A51 MACRO ASSEMBLER  TEST                                                                 06/13/2016 22:24:12 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+C_START. . . . . .  C ADDR   0030H   A   
+LOOP . . . . . . .  C ADDR   0030H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
